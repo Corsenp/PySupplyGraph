@@ -10,7 +10,7 @@ def open_csv_file(csv_name):
             for line in csv_reader:
                 print(line)
     except:
-        print("couldn't open file")
+        print("ERROR : couldn't open file")
        
     finally: 
         return
@@ -21,6 +21,6 @@ def main():
     try:
         open_csv_file(sys.argv[1])
     except:
-        print("incorrect number of argument")
+        print("ERROR : incorrect number of argument")
 
 main()
