@@ -1,4 +1,5 @@
 import csv
+import sys
 
 # Open Csv file
 def open_csv_file(csv_name):
@@ -10,10 +11,16 @@ def open_csv_file(csv_name):
                 print(line)
     except:
         print("couldn't open file")
+       
+    finally: 
+        return
 
 # main function
 def main():
-    print("Welcome to PySupplyGraph")
-    open_csv_file('.//data.csv')
+
+    try:
+        open_csv_file(sys.argv[1])
+    except:
+        print("incorrect number of argument")
 
 main()
