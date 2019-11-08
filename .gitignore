@@ -105,3 +105,6 @@ venv.bak/
 
 #csv data
 data.csv
+
+# DS_Store Mac os file
+.DS_Store
