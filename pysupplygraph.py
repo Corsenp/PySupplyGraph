@@ -13,6 +13,14 @@ def create_graph(price, q_demand, q_supplied):
     except:
         print('ERROR : can\'t create graph')
 
+# Removing whitespace of line with strip() method
+def clean_line(string):
+    try:
+        string = string.strip()
+        return string
+    except:
+        print('ERROR : error while removing white space')
+
 # Open Csv file
 def open_csv_file(csv_name):
 
@@ -23,9 +31,9 @@ def open_csv_file(csv_name):
         with open(csv_name, 'r') as csv_file:
             csv_reader = csv.reader(csv_file)
             for line in csv_reader:
-                line[0] = line[0].strip()
-                line[1] = line[1].strip()
-                line[2] = line[2].strip()
+                line[0] = clean_line(line[0])
+                line[1] = clean_line(line[1])
+                line[2] = clean_line(line[2])
                 if line[0].strip().isnumeric() == True and line[1].isnumeric() == True and line[2].isnumeric() == True:
                     price.append(int(line[0]))
                     q_demand.append(int(line[1]))
