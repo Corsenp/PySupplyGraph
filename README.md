@@ -1,6 +1,6 @@
 # PySupplyGraph
 
-PySupplyGraph is a school project, it will parse a csv file in order to get data and based on it, will create a supply and demand curve on a graph.
+PySupplyGraph (Assignment 2) is a school project, it will parse a csv file in order to get data and based on it, will create a supply and demand curve on a graph.
 
 ## Installation
 
